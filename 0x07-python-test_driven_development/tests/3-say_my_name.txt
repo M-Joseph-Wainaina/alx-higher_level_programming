@@ -1,0 +1,59 @@
+3-say_my_name
+=============
+
+function
+========
+My name is <first name> <last name>
+
+first name
+==========
+required positional argument of type string
+
+second name
+===========
+positional argument of type string
+default value ''
+
+#import the print name function
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+#test 1: prints a simple name
+
+	>>> say_my_name('carlton', 'McGee')
+	My name is carlton McGee
+
+#test 2: void function  call
+
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+#test 3: passing list type
+
+	>>> say_my_name(["carlton"])
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+#test 4: passing an int as name
+
+	>>> say_my_name(12, 'mcgee')
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name('carlton', 13)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+test 5: passing none as argument
+
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+test 6: the return of say my name
+
+	>>> type(say_my_name('carlton'))
+	My name is carlton 
+	<class 'NoneType'>
+
