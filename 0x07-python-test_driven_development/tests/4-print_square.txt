@@ -1,0 +1,44 @@
+4-print_square.txt
+==================
+function that prints a square of size passed as arg using '#'s
+
+arg:
+	size - size of the square to be printed
+Return:
+	None
+
+import the function:
+--------------------
+
+	>>> print_square = __import__('4-print_square').print_square
+
+edge cases
+==========
+
+test case 1: print a simple square:
+
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+test case 2: non integer passed as argument:
+
+	>>> print_square('a')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+test case 3: negative int passed as arg:
+
+	>>> print_square(-1)
+	Traceback (most recent call last):
+		...
+	ValueError: size must be >= 0
+
+test case 4: float type passed as arg:
+
+	>>> print_square(8.1)
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
