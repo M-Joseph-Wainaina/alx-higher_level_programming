@@ -9,7 +9,9 @@ max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
     def test_integer(self):
-        #test max integer on a list of integers
+        """
+        test max integer on a list of integers
+        """
         self.assertAlmostEqual(max_integer([1, 2, 3]), 3)
     def test_empty_list(self):
         """

@@ -4,12 +4,15 @@ module to print a new line after '.', ':', '?'
 
 """
 def text_indentation(text):
+    """
+    text_indentation 
+    function that prints two new lines after '.?:'
+    spaces not required after and before the printed lines
+    """
 
     if type(text) is not str:
         raise TypeError('text must be a string')
 
-    starting = False
-    new_string = ''
     text_len = len(text)
     i = 0
     while i < text_len:
