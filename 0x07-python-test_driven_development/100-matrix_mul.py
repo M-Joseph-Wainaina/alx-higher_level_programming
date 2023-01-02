@@ -8,6 +8,11 @@ class check_matrix:
     def __init__(self, mat, mat_name):
         self.__mat_name = mat_name
         self.__mat = mat
+        self.check_is_list()
+        self.check_is_list_of_lists()
+        self.check_is_empty()
+        self.check_elements()
+        self.check_is_rectangle()
     
     def check_is_list(self):
         message = self.__mat_name + ' must be a list'
@@ -46,21 +51,6 @@ def matrix_mul(m_a, m_b):
     #checks for matrix a
     a = check_matrix(m_a, 'm_a')
     b = check_matrix(m_b, 'm_b')
-
-    a.check_is_list()
-    b.check_is_list()
-
-    a.check_is_list_of_lists()
-    b.check_is_list_of_lists()
-    
-    a.check_is_empty()
-    b.check_is_empty()
-
-    a.check_elements()
-    b.check_elements()
-
-    a.check_is_rectangle()
-    b.check_is_rectangle()
 
     check_can_mul(m_a, m_b)
 
