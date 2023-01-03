@@ -60,25 +60,35 @@ class Rectangle:
         if value < 0:
             message = name + ' must be >= 0'
             raise ValueError(message)
+	
 
-    def __print__(self):
+    def area(self):
         """
-        prints a rectangle using #'s
+        function that return the area of a rectangle
         """
-        i = 0
-        j = 0
-        while i < self.__height:
-            while j < self.__width:
-                print('#', end='')
-            print()
+        return (self.__height * self.__width)
+
+    def perimeter(self):
+        """
+        function that returns the perimeter of a rectangle
+        """
+        return (2 * (self.__height + self.__width))
+    
     def __str__(self):
-	"""
+        """
         prints a rectangle using #'s
         """
-        i = 0
-        j = 0
-        while i < self.__height:
-            while j < self.__width:
-                print('#', end='')
-            print()
+        i = 1
+        j = 1
+        ret = ""
+        while i <= self.__height:
+            j = 1
+            while j <= self.__width:
+                ret += "#"
+                j += 1
+            if i == self.__height:
+                break
+            i += 1 
+            ret += "\n"
+        return ret
 
