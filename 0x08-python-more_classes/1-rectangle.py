@@ -60,25 +60,3 @@ class Rectangle:
         if value < 0:
             message = name + ' must be >= 0'
             raise ValueError(message)
-
-    def __print__(self):
-        """
-        prints a rectangle using #'s
-        """
-        i = 0
-        j = 0
-        while i < self.__height:
-            while j < self.__width:
-                print('#', end='')
-            print()
-    def __str__(self):
-	"""
-        prints a rectangle using #'s
-        """
-        i = 0
-        j = 0
-        while i < self.__height:
-            while j < self.__width:
-                print('#', end='')
-            print()
-
