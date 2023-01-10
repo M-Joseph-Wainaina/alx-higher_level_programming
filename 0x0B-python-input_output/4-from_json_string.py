@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import json
+from json import loads
 """
 module to convert to a json string to an object
 """
@@ -9,4 +9,4 @@ def from_json_string(my_str):
     args:
         my_string - string to be converted
     """
-    return json.loads(my_str)
+    return loads(my_str)
