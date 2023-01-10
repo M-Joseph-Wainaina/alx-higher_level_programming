@@ -2,14 +2,14 @@
 """
 module to that contains file manipulations
 """
-
 def read_file(filename=""):
-   """
-   read_file - read a file and print it to stdout
+    """
+    read_file - readfile and print it to the stdout
 
-   args:
+    args:
         filename - path to the file to be read
     """
+
     with open(filename, 'r', encoding="UTF8") as f:
         for line in f:
             print(line, end='')
