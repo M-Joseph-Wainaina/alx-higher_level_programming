@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """
 module to write content into a file
 """
