@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-
-
 """
 module to write content into a file
 """
+
+
 def write_file(filename="", text=""):
     """
     write_file - open a file or create if the file doesnt exist \
@@ -14,4 +14,3 @@ def write_file(filename="", text=""):
     """
     with open(filename, mode='w', encoding="utf-8") as f:
         return f.write(text)
-
