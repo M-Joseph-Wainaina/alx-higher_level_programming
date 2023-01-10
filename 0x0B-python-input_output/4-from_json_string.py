@@ -7,6 +7,6 @@ def from_json_string(my_str):
     """
     from_json_string - convert a json string into an object
     args:
-        my_string - string to be converted
+        my_string - string to be converted into a python object
     """
     return loads(my_str)
