@@ -2,6 +2,8 @@
 """
 module to open and write a file in append mode
 """
+
+
 def append_write(filename="", text=""):
     """
     append write - open and write a file in append
