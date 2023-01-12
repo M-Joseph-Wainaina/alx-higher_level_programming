@@ -6,7 +6,7 @@ module to read a file and print it to the stdout
 
 def read_file(filename=""):
     """
-    read_file 
+    read_file
     args
         path to file to be read
     """
