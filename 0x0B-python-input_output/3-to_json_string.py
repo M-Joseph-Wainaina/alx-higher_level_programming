@@ -8,5 +8,5 @@ def to_json_string(my_obj):
    """
    to convert a py object into a json string
    """
-   dumps(my_obj)
+   return dumps(my_obj)
 
