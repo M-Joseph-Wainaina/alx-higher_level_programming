@@ -3,6 +3,7 @@
 module that creates a class student
 """
 
+
 class Student:
     """
     class that defines a student
@@ -21,4 +22,3 @@ class Student:
         public method to retrieve json rep of the class
         """
         return self.__dict__
-        
