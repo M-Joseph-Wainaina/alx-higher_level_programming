@@ -1,11 +1,14 @@
 #!/usr/bin/python3
+"""
+module to add args passed in cmd to a json file
+"""
 import sys
 import json
-
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 a = []
+
 
 for i in range(1, len(sys.argv)):
     try:
@@ -14,5 +17,4 @@ for i in range(1, len(sys.argv)):
         pass
     finally:
         a.append(sys.argv[i])
-        save_to_json_file(a, 'add_item.json')
-    
+        save_to_json_file(a, 'add_item.json')    
