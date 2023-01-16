@@ -134,7 +134,6 @@ class Rectangle(Base):
             for key in kwargs:
                 if key in modif_arg:
                     setattr(self, key, kwargs[key])
-        
 
     def __str__(self):
         """
