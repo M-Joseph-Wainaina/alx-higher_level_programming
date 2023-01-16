@@ -34,5 +34,5 @@ class Square(Rectangle):
         """
         setter for the value of the square
         """
-        self.height(value)
-        self.width(value)
+        self.width = value
+        self.height = value
