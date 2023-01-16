@@ -117,7 +117,7 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         method to update the values of the instance
         """
@@ -125,14 +125,21 @@ class Rectangle(Base):
         modif_arg = ['id', 'width', 'height', 'x', 'y']
         if argsNo > 5:
             argsNo = 5
-        for i in range(argsNo):
-            setattr(self, modif_arg[i], args[i])
+
+        if argsNo > 0:
+            for i in range(argsNo):
+                setattr(self, modif_arg[i], args[i])
+
+        elif len(kwargs) > 0:
+            for key in kwargs:
+                if key in modif_arg:
+                    setattr(self, key, kwargs[key])
         
 
     def __str__(self):
         """
         overide the str method
         """
-        message = f'[Rectangle] ({self.id}) {self.__x}/{self.__y} '
-        message += f'- {self.__width}/{self.__height}'
-        return message
+        return '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(
+                self.id, self.x, self.y, self.width, self.height
+                )
