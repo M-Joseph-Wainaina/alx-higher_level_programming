@@ -56,3 +56,14 @@ class Square(Rectangle):
             for kwarg in kwargs:
                 if kwarg in modif_atr:
                     setattr(self, kwarg, kwargs[kwarg])
+
+    def to_dictionary(self):
+        """
+        return the dictionaty description of a square instace
+        """
+        return {
+                'id': self.id,
+                'size': self.size,
+                'x': self.x,
+                'y': self.y
+                }
