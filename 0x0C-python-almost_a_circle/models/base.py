@@ -27,7 +27,5 @@ class Base:
         return the json string rep of list_dictionary
         """
         if len(list_dictionaries) == 0 or list_dictionaries is None:
-                return "[]"
+            return "[]"
         return json.dumps(list_dictionaries)
-
-
