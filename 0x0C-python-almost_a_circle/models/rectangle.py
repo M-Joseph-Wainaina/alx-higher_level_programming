@@ -16,6 +16,7 @@ class Rectangle(Base):
         """
 
         super().__init__(id)
+        self.check_args(width=width, height=height, x=x, y=y)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -33,6 +34,7 @@ class Rectangle(Base):
         """
         setter method for the width private attribute
         """
+        self.check_args(width=value)
         self.__width = value
 
     @property
@@ -48,6 +50,7 @@ class Rectangle(Base):
         """
         getter method for height
         """
+        self.check_args(height=value)
         self.__height = height
 
     @property
@@ -63,6 +66,7 @@ class Rectangle(Base):
         """
         setter method for height
         """
+        self.check_args(x=value)
         self.__x = value
 
     @property
@@ -77,4 +81,19 @@ class Rectangle(Base):
         """
         setter method for y
         """
+        self.check_args(y=value)
         self.__y = value
+
+    def check_args(self, **kwargs):
+        """
+        validation for the setters and instatiation
+        """
+        for kwarg in kwargs:
+            if type(kwargs[kwarg]) is not int:
+                raise TypeError(f"{kwarg} must be an integer")
+            if kwarg in ['width', 'height']:
+                if kwargs[kwarg] <= 0:
+                    raise ValueError(f"{kwarg} must be > 0")
+            if kwarg in ['x', 'y']:
+                if kwargs[kwarg] < 0:
+                    raise ValueError(f"{kwarg} must be >= 0")
