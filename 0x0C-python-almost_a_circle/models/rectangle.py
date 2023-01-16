@@ -108,7 +108,11 @@ class Rectangle(Base):
         """
         print the instance of the rectangle in the stdout using #
         """
+        for i in range(self.__y):
+            print()
         for i in range(self.__height):
+            for k in range(self.__x):
+                print(" ", end='')
             for j in range(self.__width):
                 print("#", end='')
             print()
