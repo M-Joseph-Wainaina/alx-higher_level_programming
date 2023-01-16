@@ -148,9 +148,9 @@ class Rectangle(Base):
         method return the dictionary description of the instance
         """
         return {
-                'id': self.id ,
-                'width': self.width ,
-                'height': self.height ,
-                'x': self.x ,
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
                 'y': self.y
                 }
