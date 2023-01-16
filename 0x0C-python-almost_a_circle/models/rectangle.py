@@ -97,3 +97,9 @@ class Rectangle(Base):
             if kwarg in ['x', 'y']:
                 if kwargs[kwarg] < 0:
                     raise ValueError(f"{kwarg} must be >= 0")
+
+    def area(self):
+        """
+        public method that return the value of area
+        """
+        return self.__width * self.__height
