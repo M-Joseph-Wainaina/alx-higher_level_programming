@@ -51,7 +51,7 @@ class Rectangle(Base):
         getter method for height
         """
         self.check_args(height=value)
-        self.__height = height
+        self.__height = value
 
     @property
     def x(self):
@@ -116,6 +116,18 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end='')
             print()
+
+    def update(self, *args):
+        """
+        method to update the values of the instance
+        """
+        argsNo = len(args)
+        modif_arg = ['id', 'width', 'height', 'x', 'y']
+        if argsNo > 5:
+            argsNo = 5
+        for i in range(argsNo):
+            setattr(self, modif_arg[i], args[i])
+        
 
     def __str__(self):
         """
