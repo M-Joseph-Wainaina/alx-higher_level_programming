@@ -21,12 +21,14 @@ class Square(Rectangle):
         overide the str method
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
+
     @property
     def size(self):
         """
         return the size of the square instance
         """
         return self.height
+
     @size.setter
     def size(self, value):
         """
