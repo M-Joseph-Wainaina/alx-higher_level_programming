@@ -3,6 +3,7 @@
 module that creates a base class
 """
 import json
+from os import path
 
 
 class Base:
@@ -58,3 +59,37 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        return an instance with all the attributes already set
+        """
+
+        if cls.__name__ = 'Square':
+            dummy = cls(1)
+        if cls.__name__ = 'Rectangle':
+            dummy = cls(1, 1)
+
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        function that loads from a from a file and return a list of instances
+        """
+        filename = cls.__name__ + '.json'
+        
+        if path.exists(filename) is False:
+            return []
+
+        with open(filename, mode='r', encoding='utf-8') as f:
+            objs = cls.from_json_string(f.read())
+            instances = []
+
+            for elem in objs:
+                instances.append(cls.create(**elem))
+
+        return instances
+
