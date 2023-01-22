@@ -66,9 +66,9 @@ class Base:
         return an instance with all the attributes already set
         """
 
-        if cls.__name__ = 'Square':
+        if cls.__name__ == 'Square':
             dummy = cls(1)
-        if cls.__name__ = 'Rectangle':
+        if cls.__name__ == 'Rectangle':
             dummy = cls(1, 1)
 
         dummy.update(**dictionary)
@@ -80,7 +80,6 @@ class Base:
         function that loads from a from a file and return a list of instances
         """
         filename = cls.__name__ + '.json'
-        
         if path.exists(filename) is False:
             return []
 
@@ -92,4 +91,3 @@ class Base:
                 instances.append(cls.create(**elem))
 
         return instances
-
