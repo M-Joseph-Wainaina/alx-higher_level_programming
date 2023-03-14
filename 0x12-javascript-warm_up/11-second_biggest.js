@@ -8,8 +8,8 @@ if (len === 0 || len === 1) {
 } else {
   let max = 0;
   for (let i = 0; i < len; i++) {
-    if (max < cmdLineArgs[i]) {
-      max = cmdLineArgs[i];
+    if (max < Number(cmdLineArgs[i])) {
+      max = Number(cmdLineArgs[i]);
     }
   }
   console.log(max);
