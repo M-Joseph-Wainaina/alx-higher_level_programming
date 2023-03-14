@@ -1,14 +1,11 @@
 #!/usr/bin/node
 
-cmdArgs = process.argv.slice(2);
+const cmdArgs = process.argv.slice(2);
 
-if (cmdArgs.length == 0) {
-	console.log('No argument');
+if (cmdArgs.length === 0) {
+  console.log('No argument');
+} else if (cmdArgs.length === 1) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
 }
-else if(cmdArgs.length == 1) {
-	console.log('Argument found');
-}
-else{
-	console.log('Arguments found');
-}
-
