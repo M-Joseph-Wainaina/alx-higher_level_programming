@@ -6,11 +6,6 @@ const len = cmdLineArgs.length;
 if (len === 0 || len === 1) {
   console.log(0);
 } else {
-  let max = 0;
-  for (let i = 0; i < len; i++) {
-    if (max < Number(cmdLineArgs[i])) {
-      max = Number(cmdLineArgs[i]);
-    }
-  }
-  console.log(max);
+  const sortedArr = cmdLineArgs.sort(function (a, b) { return (a - b); });
+  console.log(sortedArr[len - 2]);
 }
